@@ -1,1 +1,59 @@
+gcc -g p18.c
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0xa22: file p18.c, line 56.
+(gdb) r
+Starting program: /home/runner/TwoProgramsadayassignment/a.out 
+warning: Error disabling address space randomization: Operation not permitted
 
+Breakpoint 1, main () at p18.c:56
+56  {
+(gdb) n
+58    Complex c[n];
+(gdb) n
+60    n=get_n();
+(gdb) n
+enter how many complex numbers you want to add
+3
+61    input_n_complex(n,c);
+(gdb) n
+Enter the complex number
+1
+3
+Enter the complex number
+2
+4
+Enter the complex number
+5
+7
+62    result=add_n_complex(n,c);
+(gdb) n
+63    output(n,c,result);
+(gdb) n
+1.000000 + 3.000000i
+2.000000 + 4.000000i
++ 5.000000 + 7.000000i is
+8.000000 + 14.000000i
+64    return 0;
+(gdb) n
+65  }
+(gdb) c
+Continuing.
+[Inferior 1 (process 442) exited normally]
+(gdb) q
+ 
