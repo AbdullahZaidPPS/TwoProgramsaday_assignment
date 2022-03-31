@@ -1,1 +1,57 @@
+gcc -g p08.c
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0xb73: file p08.c, line 67.
+(gdb) r
+Starting program: /home/runner/TwoProgramsadayassignment/a.out 
+warning: Error disabling address space randomization: Operation not permitted
 
+Breakpoint 1, main () at p08.c:67
+67  {
+(gdb) n
+70    x=input_n();
+(gdb) n
+Enter the number of triangles
+3
+71    Triangle t[x];
+(gdb) n
+72    input_n_triangles(x,t);
+(gdb) n
+Enter base and height
+3
+4
+Enter base and height
+5
+6
+Enter base and height
+4
+6
+73    find_areas_n(x,t);
+(gdb) n
+74    small=find_smallest_triangle(x,t);
+(gdb) n
+75    output(x,t,small);
+(gdb) n
+76    return 0;
+(gdb) n
+77  }
+(gdb) c
+Continuing.
+The smallest of triangles with base and height 3.000000,4.000000 5.000000,6.000000and 4.000000,6.000000 is triangle with base 3.000000 and altitude 4.000000 is 6.000000[Inferior 1 (process 497) exited normally]
+(gdb) q
+ 
