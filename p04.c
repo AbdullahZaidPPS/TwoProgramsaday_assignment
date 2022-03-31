@@ -20,7 +20,7 @@ int sum_composite_numbers(int n,int a[n])
   int j;
   for( j=0;j<n;j++)
     {
-      for(int k=1;a[j]%k==0 && k<a[j];k++)
+      for(int q=1;a[j]%q==0 && q<a[j];q++)
         {
           c++;
         }

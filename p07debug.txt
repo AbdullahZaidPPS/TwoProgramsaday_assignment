@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-gcc -g p01.c
+gcc -g p07.c
  gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
 Copyright (C) 2018 Free Software Foundation, Inc.
@@ -17,50 +16,54 @@ For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.out...done.
 (gdb) b main
-Breakpoint 1 at 0x822: file p01.c, line 16.
+Breakpoint 1 at 0x877: file p07.c, line 23.
 (gdb) r
 Starting program: /home/runner/TwoProgramsadayassignment/a.out 
 warning: Error disabling address space randomization: Operation not permitted
 
-Breakpoint 1, main () at p01.c:16
-16  {
+Breakpoint 1, main () at p07.c:23
+23  {
 (gdb) n
-18    input(&base1,&height1);
+25    tri=input_triangle();
 (gdb) s
-input (base=0x7ffebea0553c, height=0x7ffebea05540) at p01.c:4
-4     printf("Enter base and height of a triangle\n");
+input_triangle () at p07.c:8
+8   {
 (gdb) n
-Enter base and height of a triangle
-5     scanf("%f%f",base,height);
+10    printf("Enter base and height\n");
 (gdb) n
-1
+Enter base and height
+11    scanf("%f%f",&b.base,&b.altitude);
+(gdb) n
 2
-6   }
+3
+12    return b;
+(gdb) p b
+$1 = {base = 2, altitude = 3, area = 1.35886971e-24}
 (gdb) n
-main () at p01.c:19
-19    find_area(base1,height1,&area1);
+13  }
+(gdb) n
+main () at p07.c:26
+26    find_area(&tri);
 (gdb) s
-find_area (base=1, height=2, area=0x7ffebea05544) at p01.c:9
-9     *area=0.5*base*height;
+find_area (t=0x7fff2e1e358c) at p07.c:16
+16    t->area=0.5*t->base*t->altitude;
 (gdb) n
-10  }
-(gdb) p *area
-$1 = 1
+17  }
 (gdb) n
-main () at p01.c:20
-20    output(base1,height1,area1);
+main () at p07.c:27
+27    output(tri);
 (gdb) s
-output (base=1, height=2, area=1) at p01.c:13
-13    printf("The area of the triangle with base %f and height %f is %f\n",base,height,area);
+output (t=...) at p07.c:20
+20    printf("The area of triangle with base = %f and altitude = %f is %f",t.base,t.altitude,t.area);
 (gdb) n
-The area of the triangle with base 1.000000 and height 2.000000 is 1.000000
-14  }
+21  }
 (gdb) n
-main () at p01.c:21
-21    return 0;
+main () at p07.c:28
+28    return 0;
 (gdb) n
-22  }
-(gdb) 
-=======
-
->>>>>>> origin/main
+29  }
+(gdb) c
+Continuing.
+The area of triangle with base = 2.000000 and altitude = 3.000000 is 3.000000[Inferior 1 (process 610) exited normally]
+(gdb) q
+ 

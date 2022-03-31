@@ -8,12 +8,19 @@ int input()
 }
 int gcd(int a,int b)
 {
-  int n;
+  
+  int t;
+  if(a<b)
+  {
+    t=a;
+    a=b;
+    b=t;
+  }
   while(b!=0)
     {
-      n=b;
+      t=b;
       b=a%b;
-      a=n;
+      a=t;
     }
    return a;
 }
