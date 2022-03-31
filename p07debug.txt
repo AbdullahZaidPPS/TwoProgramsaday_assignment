@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 gcc -g p07.c
  gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
@@ -68,6 +69,9 @@ Continuing.
 The area of triangle with base = 2.000000 and altitude = 3.000000 is 3.000000[Inferior 1 (process 610) exited normally]
 (gdb) q
  
+=======
+
+>>>>>>> origin/main
 =======
 
 >>>>>>> origin/main

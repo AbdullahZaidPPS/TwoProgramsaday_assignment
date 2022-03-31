@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 gcc -g p12.c
  gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
@@ -188,6 +189,9 @@ main () at p12.c:36
 Continuing.
 The 6 th element in the fibonacci series is 5[Inferior 1 (process 47) exited normally]
 (gdb) 
+=======
+
+>>>>>>> origin/main
 =======
 
 >>>>>>> origin/main

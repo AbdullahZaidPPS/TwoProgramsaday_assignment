@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 gcc -g p01.c
  gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
@@ -62,6 +63,9 @@ main () at p01.c:21
 (gdb) n
 22  }
 (gdb) 
+=======
+
+>>>>>>> origin/main
 =======
 
 >>>>>>> origin/main
