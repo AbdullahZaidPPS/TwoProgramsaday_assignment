@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  gcc -g p02.c
  gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
@@ -81,3 +82,6 @@ Continuing.
 [Inferior 1 (process 76) exited normally]
 (gdb) q
  
+=======
+
+>>>>>>> origin/main
